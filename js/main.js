@@ -17,9 +17,18 @@
     if(id){var el=document.getElementById(id);if(el){el.scrollIntoView();}}
   });
 
+  var en=document.documentElement.lang==='en';
+  document.querySelectorAll('[data-lang]').forEach(function(a){
+    a.addEventListener('click',function(){
+      try{localStorage.setItem('lang',a.getAttribute('data-lang'))}catch(_){}
+      a.href=a.getAttribute('href').split('#')[0]+location.hash;
+    });
+  });
+
   document.querySelectorAll('[data-copy]').forEach(function(b){
+    var label=b.textContent;
     b.addEventListener('click',function(){
-      var v=b.getAttribute('data-copy'),done=function(){b.textContent='Скопировано';setTimeout(function(){b.textContent='Копировать'},1500)};
+      var v=b.getAttribute('data-copy'),done=function(){b.textContent=en?'Copied':'Скопировано';setTimeout(function(){b.textContent=label},1500)};
       try{navigator.clipboard.writeText(v).then(done,function(){sel(b)})}catch(_){sel(b)}
     });
   });

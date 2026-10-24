@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Дмитрий Медушевский — UX/UI дизайнер</title>
 <meta name="description" content="Портфолио Дмитрия Медушевского: игровые интерфейсы, продуктовый UX/UI и брендинг.">
+<link rel="alternate" hreflang="ru" href="https://dmitry-cv.github.io/">
+<link rel="alternate" hreflang="en" href="https://dmitry-cv.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://dmitry-cv.github.io/en/">
+<script>
+// Non-Russian-speaking visitors get the English page, unless they picked a language in the switcher.
+(function(){
+  var p;try{p=localStorage.getItem('lang')}catch(e){}
+  if(p==='ru')return;
+  var l=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();
+  if(p==='en'||(!p&&!/^(ru|uk|be|kk)(-|$)/.test(l)))location.replace('en/'+location.hash);
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="css/style.css">
@@ -20,6 +32,7 @@
       <li><a href="#more" data-short="Ещё"><kbd>4</kbd><span>Другие работы</span></a></li>
       <li><a href="#contact" data-short="Связь"><kbd>C</kbd><span>Контакты</span></a></li>
     </ul>
+    <div class="lang"><span aria-current="true">RU</span><a href="en/" hreflang="en" lang="en" data-lang="en">EN</a></div>
   </div>
 </nav>
 
