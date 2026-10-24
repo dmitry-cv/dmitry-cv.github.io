@@ -32,5 +32,16 @@
       try{navigator.clipboard.writeText(v).then(done,function(){sel(b)})}catch(_){sel(b)}
     });
   });
+  // PDF = the browser's print dialog ("Save as PDF") with the print stylesheet. Lazy images are forced in first, otherwise unscrolled screens print blank.
+  function eager(){document.querySelectorAll('img[loading="lazy"]').forEach(function(i){i.loading='eager'})}
+  window.addEventListener('beforeprint',eager);
+  document.querySelectorAll('[data-pdf]').forEach(function(b){
+    b.addEventListener('click',function(){
+      eager();
+      var imgs=[].slice.call(document.querySelectorAll('.hero img,main img'));
+      Promise.all(imgs.map(function(i){return i.decode?i.decode().catch(function(){}):null})).then(function(){window.print()});
+    });
+  });
+
   function sel(b){var c=b.parentNode.querySelector('code');var r=document.createRange();r.selectNodeContents(c);var s=getSelection();s.removeAllRanges();s.addRange(r);}
 })();
