@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дмитрий Медушевский — UX/UI дизайнер</title>
+<meta name="description" content="Портфолио Дмитрия Медушевского: игровые интерфейсы, продуктовый UX/UI и брендинг.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="draft" id="draft">
+  <div class="wrap">
+    <p>Черновик. Жёлтые пометки показывают, какие факты нужно дописать самому: цифры, роль, итоги проектов. Без них кейсы выглядят как галерея.</p>
+    <button type="button" id="hideTodo">Скрыть пометки</button>
+  </div>
+</div>
+
+<nav class="bar" aria-label="Разделы">
+  <div class="wrap">
+    <div class="brand"><b>Медушевский</b> · Inkredo</div>
+    <ul class="keys">
+      <li><a href="#games" data-short="Игры"><kbd>1</kbd><span>Игровые интерфейсы</span></a></li>
+      <li><a href="#product" data-short="Продукты"><kbd>2</kbd><span>Продукты</span></a></li>
+      <li><a href="#brand" data-short="Бренд"><kbd>3</kbd><span>Бренд</span></a></li>
+      <li><a href="#more" data-short="Ещё"><kbd>4</kbd><span>Другие работы</span></a></li>
+      <li><a href="#contact" data-short="Связь"><kbd>C</kbd><span>Контакты</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">UX/UI дизайнер · игровые и продуктовые интерфейсы</div>
+      <h1>Интерфейсы, в&nbsp;которых <em>хочется остаться</em></h1>
+      <p class="lead">Девять лет в дизайне, из них около трёх в GTA 5 RP: делал игровые интерфейсы и сами игровые системы, от HUD и инвентаря до доната и экономики. Тот же подход к вовлечению переношу в продукты: дашборды, сервисы записи, интернет-магазины.</p>
+      <div class="cta">
+        <a class="btn primary" href="#games">Смотреть кейсы</a>
+        <a class="btn" href="#contact">Связаться</a>
+      </div>
+      <div class="facts">
+        <div><strong>9 лет</strong><span>в дизайне</span></div>
+        <div><strong>≈3 года</strong><span>игровой UI на GTA 5 RP</span></div>
+        <div><strong>4 545</strong><span>подписчиков у личного бренда Obnimay</span></div>
+      </div>
+    </div>
+    <img class="portrait" src="img/portrait.webp" alt="Дмитрий Медушевский" width="460" height="460">
+  </div>
+</header>
+
+<main>
+<!-- GAMES -->
+<section class="chapter" id="games">
+  <div class="wrap">
+    <div class="chapter-head">
+      <kbd>1</kbd>
+      <h2>Игровые интерфейсы</h2>
+      <p>Role Play серверы GTA 5: Roxland, Megapolis RP, ReFrox и другие. Здесь интерфейс напрямую влияет на онлайн и доход проекта.</p>
+    </div>
+
+    <article class="case">
+      <div class="case-text">
+        <div class="tags"><span>Game UI</span><span>Геймдизайн</span><span>Монетизация</span></div>
+        <h3>Интерфейсы и игровые системы для RP-серверов</h3>
+        <dl>
+          <div><dt>Задача</dt><dd>Игрок проводит на сервере часы. Ему нужно быстро находить нужное действие, понимать правила экономики и хотеть возвращаться каждый день.</dd></div>
+          <div><dt>Что я делал</dt><dd>
+            <ul>
+              <li>HUD, меню, инвентарь, банкомат, автосервис, магазин</li>
+              <li>Ежедневные награды, рефералка, лотерея, крафт</li>
+              <li>Баланс механик, карты и точки интереса</li>
+              <li>Баннеры и промо для запусков и ивентов</li>
+            </ul></dd></div>
+          <div><dt>Результат</dt><dd><p class="todo">цифры: онлайн до и после, конверсия в донат, retention, число жалоб в поддержку. Хотя бы одна метрика по одному экрану.</p></dd></div>
+        </dl>
+        <p class="todo">роль в команде, движок (RAGE MP / alt:V), стек (Figma, CEF/HTML), с кем работал из разработчиков.</p>
+      </div>
+
+      <div class="screens">
+        <figure>
+          <button class="shot" type="button"><img src="img/tuning.webp" alt="Экран заказа модификаций авто" loading="lazy" width="1600" height="809"></button>
+          <figcaption><b>Автосервис.</b> Цена детали и стоимость работ разделены, состояние детали видно до покупки, а корзина сразу считает остаток в кошельке.</figcaption>
+        </figure>
+        <figure>
+          <button class="shot" type="button"><img src="img/atm.webp" alt="Интерфейс банкомата Fleeca" loading="lazy" width="1600" height="896"></button>
+          <figcaption><b>Банкомат.</b> Двенадцать операций в одной сетке, ввод суммы по шагам («шаг 1 из 3»), комиссия и оба баланса всегда перед глазами.</figcaption>
+        </figure>
+        <div class="pair">
+          <figure>
+            <button class="shot" type="button"><img src="img/admin.webp" alt="Меню администратора" loading="lazy" width="1470" height="820"></button>
+            <figcaption><b>Меню администратора.</b> Тикеты первыми и со счётчиком, закрытые разделы показывают требуемый уровень доступа.</figcaption>
+          </figure>
+          <figure>
+            <button class="shot" type="button"><img src="img/craft.webp" alt="Интерфейс крафта Рецептология" loading="lazy" width="1600" height="900"></button>
+            <figcaption><b>Крафт.</b> Шанс изучения рецепта и цена попытки видны заранее, прогресс идёт прямо на верстаке.</figcaption>
+          </figure>
+        </div>
+        <figure>
+          <button class="shot" type="button"><img src="img/hud.webp" alt="Спидометр и уведомления HUD" loading="lazy" width="1600" height="396"></button>
+          <figcaption><b>HUD.</b> Спидометр в трёх состояниях и система уведомлений: успех, нет доступа, блокировка игрока.</figcaption>
+        </figure>
+        <div class="pair">
+          <figure>
+            <button class="shot" type="button"><img src="img/daily.webp" alt="Ежедневные награды и предложение недели" loading="lazy" width="1600" height="896"></button>
+            <figcaption><b>Удержание.</b> Ежедневные награды отдельно для обычного и VIP-аккаунта, рулетка и предложение недели с таймером.</figcaption>
+          </figure>
+          <figure>
+            <button class="shot" type="button"><img src="img/referral.webp" alt="Реферальная система и лотерея в игровом телефоне" loading="lazy" width="1600" height="792"></button>
+            <figcaption><b>Рост.</b> Реферальная система с наградой за 100 приглашённых и лотерея в игровом телефоне.</figcaption>
+          </figure>
+        </div>
+        <figure>
+          <button class="shot" type="button"><img src="img/shop.webp" alt="Премиум-магазин, инвентарь и производство" loading="lazy" width="1600" height="792"></button>
+          <figcaption><b>Экономика.</b> Производство, бонусы за онлайн, премиум-магазин и инвентарь с быстрым доступом.</figcaption>
+        </figure>
+        <figure>
+          <button class="shot" type="button"><img src="img/gamemenus.webp" alt="Меню персонажа, продажа домов, главное меню" loading="lazy" width="1600" height="792"></button>
+          <figcaption>Профиль персонажа, продажа недвижимости с фильтром по цене, главное меню и покупка номерного знака.</figcaption>
+        </figure>
+        <p class="todo">1–2 коротких видео или GIF: открытие меню, анимация уведомления. Игровой UI оценивают в движении.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section class="chapter" id="product">
+  <div class="wrap">
+    <div class="chapter-head">
+      <kbd>2</kbd>
+      <h2>Продукты</h2>
+      <p>Сервисы, где важны сценарии и данные: личные кабинеты, запись, интернет-магазины, админки.</p>
+    </div>
+
+    <article class="case">
+      <div class="case-text">
+        <div class="tags"><span>Дашборд</span><span>Геймификация</span></div>
+        <h3>Skillanthropy: кабинет специалиста</h3>
+        <dl>
+          <div><dt>Задача</dt><dd>Платформа связывает специалистов с некоммерческими проектами. Нужно, чтобы люди заполняли профиль, откликались и возвращались.</dd></div>
+          <div><dt>Решение</dt><dd>Механики из игр в продукте: уровни, опыт, монеты, челленджи вроде «первый отклик» или «пригласи 20 друзей». Рядом статус заявок и доступные проекты.</dd></div>
+          <div><dt>Итог</dt><dd><p class="todo">для какой страны и команды делал, свою роль, что было запущено.</p></dd></div>
+        </dl>
+      </div>
+      <div class="screens">
+        <figure>
+          <button class="shot" type="button"><img src="img/sk.webp" alt="Личный кабинет Skillanthropy с челленджами" loading="lazy" width="1600" height="792"></button>
+          <figcaption>Личный кабинет, челленджи и список заявок с их статусами.</figcaption>
+        </figure>
+        <figure>
+          <button class="shot" type="button"><img src="img/skill.webp" alt="Сайт Skillanthropy и другие лендинги" loading="lazy" width="1600" height="792"></button>
+          <figcaption>Сайт платформы, лендинг вебинара и меню Telegram-бота.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-text">
+        <div class="tags"><span>Сайт</span><span>Админка</span><span>Медицина</span></div>
+        <h3>«Святая Надежда»: запись к врачу</h3>
+        <dl>
+          <div><dt>Задача</dt><dd>Лечебно-диагностическому центру нужен сайт с записью к специалистам и рабочее место администратора.</dd></div>
+          <div><dt>Решение</dt><dd>Пациент выбирает врача и свободный слот. Администратор видит календарь, карточку записи и журнал изменений.</dd></div>
+          <div><dt>Итог</dt><dd><p class="todo">запущен ли сайт, сколько записей идёт онлайн, что стало проще администраторам.</p></dd></div>
+        </dl>
+      </div>
+      <div class="screens">
+        <figure>
+          <button class="shot" type="button"><img src="img/med.webp" alt="График записей и сайт медицинского центра" loading="lazy" width="1600" height="792"></button>
+          <figcaption>График записей в админке и список специалистов на сайте.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-text">
+        <div class="tags"><span>E-commerce</span><span>Админка</span><span>EN</span></div>
+        <h3>Vivobiome: обувь по скану стопы</h3>
+        <dl>
+          <div><dt>Задача</dt><dd>Инновационное направление Vivobarefoot печатает обувь по 3D-скану стопы. Нужны витрина, личный кабинет и управление заказами.</dd></div>
+          <div><dt>Решение</dt><dd>Сдержанная витрина в духе бренда, путь «запись на скан, потом заказ» и таблица заказов со статусами для команды.</dd></div>
+          <div><dt>Итог</dt><dd><p class="todo">роль (весь проект или часть), команда, сроки.</p></dd></div>
+        </dl>
+      </div>
+      <div class="screens">
+        <figure>
+          <button class="shot" type="button"><img src="img/vivo1.webp" alt="Сайт Vivobiome" loading="lazy" width="1600" height="792"></button>
+          <figcaption>Главная и страница продукта.</figcaption>
+        </figure>
+        <figure>
+          <button class="shot" type="button"><img src="img/vivo2.webp" alt="Админка заказов Vivobiome" loading="lazy" width="1600" height="792"></button>
+          <figcaption>Админка заказов и карточка товара в кабинете.</figcaption>
+        </figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- BRAND -->
+<section class="chapter" id="brand">
+  <div class="wrap">
+    <div class="chapter-head">
+      <kbd>3</kbd>
+      <h2>Бренд</h2>
+      <p>Фирменный стиль, который потом живёт в носителях и в продукте.</p>
+    </div>
+
+    <article class="case">
+      <div class="case-text">
+        <div class="tags"><span>Ребрендинг</span><span>Гайдлайн</span></div>
+        <h3>Футбольная школа «Голеадор»</h3>
+        <dl>
+          <div><dt>Задача</dt><dd>Детской футбольной школе нужен был новый стиль и правила его использования на форме, рекламе и документах.</dd></div>
+          <div><dt>Решение</dt><dd>Логотип со львом, гайдлайн на форму, шарфы, флаги, билборды и документы. Отдельно «Дневник чемпиона»: он мотивирует детей не пропускать тренировки и получать поощрения.</dd></div>
+        </dl>
+      </div>
+      <div class="screens">
+        <figure>
+          <button class="shot" type="button"><img src="img/goleador.webp" alt="Гайдлайн футбольной школы Голеадор" loading="lazy" width="1600" height="900"></button>
+          <figcaption>Страницы гайдлайна: реклама, шарф, мешок, документы, паспорт логотипа.</figcaption>
+        </figure>
+        <figure>
+          <button class="shot" type="button"><img src="img/diary.webp" alt="Дневник чемпиона" loading="lazy" width="1600" height="317"></button>
+          <figcaption>«Дневник чемпиона» для учеников.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-text">
+        <div class="tags"><span>Личный проект</span><span>Иллюстрация</span></div>
+        <h3>Obnimay: авторские открытки</h3>
+        <dl>
+          <div><dt>Что это</dt><dd>Собственный бренд открыток с доставкой по Приднестровью и Молдове. Делаю всё сам: дизайн, контент, продвижение.</dd></div>
+          <div><dt>Цифры</dt><dd>4 545 подписчиков в Instagram. <span class="todo">продажи или число отправленных открыток, если можно показать.</span></dd></div>
+        </dl>
+      </div>
+      <div class="screens">
+        <figure>
+          <button class="shot" type="button"><img src="img/obnimay.webp" alt="Открытки Obnimay" loading="lazy" width="1600" height="433"></button>
+        </figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- MORE -->
+<section class="chapter" id="more">
+  <div class="wrap">
+    <div class="chapter-head">
+      <kbd>4</kbd>
+      <h2>Другие работы</h2>
+      <p>Сайты, приложения и графика. Нажмите на картинку, чтобы увеличить.</p>
+    </div>
+    <div class="grid">
+      <figure><button class="shot" type="button"><img src="img/cbs.webp" alt="CBS Home" loading="lazy" width="1600" height="792"></button><figcaption><b>CBS Home.</b> Конструктор проекта дома за 4 шага.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/dday.webp" alt="D-Day" loading="lazy" width="1600" height="792"></button><figcaption><b>D-Day.</b> Сайт IT-конференции в Тирасполе.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/vue.webp" alt="Обучение Vue.js" loading="lazy" width="1600" height="792"></button><figcaption><b>Vueurisme.</b> Платформа обучения программированию.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/apps.webp" alt="Мобильные приложения" loading="lazy" width="1600" height="792"></button><figcaption><b>Приложения.</b> Доставка еды и магазин систем видеонаблюдения.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/tatar.webp" alt="Культурный Татарстан" loading="lazy" width="1600" height="792"></button><figcaption><b>Культурный Татарстан.</b> Туристический портал с маршрутами.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/evolvium.webp" alt="Evolvium" loading="lazy" width="1600" height="792"></button><figcaption><b>Evolvium.</b> Сайт игрового сервера Minecraft.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/wwtech.webp" alt="WW Tech" loading="lazy" width="1600" height="792"></button><figcaption><b>WW Tech.</b> Сайт студии разработки.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/mendee.webp" alt="Mendee" loading="lazy" width="1600" height="792"></button><figcaption><b>Mendee.</b> Сайт студии из Лондона.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/banners.webp" alt="Баннеры RP-серверов" loading="lazy" width="1600" height="792"></button><figcaption><b>Промо RP-серверов.</b> Megapolis RP и ReFrox.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/agro.webp" alt="Трейдинг Групп" loading="lazy" width="1600" height="900"></button><figcaption><b>Трейдинг Групп.</b> Логотип агрохолдинга.</figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/logos.webp" alt="Логотипы" loading="lazy" width="1600" height="792"></button><figcaption><b>Логотипы.</b></figcaption></figure>
+      <figure><button class="shot" type="button"><img src="img/billboards.webp" alt="Наружная реклама" loading="lazy" width="1600" height="792"></button><figcaption><b>Наружная реклама.</b></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="chapter" id="about">
+  <div class="wrap about">
+    <div>
+      <div class="chapter-head" style="margin-bottom:24px"><h2>Обо мне</h2></div>
+      <p>Начинал с графического дизайна и полиграфии, потом ушёл в интерфейсы. Три года на игровых проектах научили смотреть на экран через поведение игрока: что он сделает, почему вернётся, где бросит.</p>
+      <p>Умею разобраться в задаче, даже когда заказчик сам не может её сформулировать. Работаю в команде так, чтобы разработчикам не приходилось переспрашивать.</p>
+    </div>
+    <div>
+      <div class="chapter-head" style="margin-bottom:24px"><h2>Как работаю</h2></div>
+      <ol class="steps">
+        <li>Задаю вопросы, пока не пойму цель проекта и пользователя.</li>
+        <li>Предлагаю решения, а не только картинки, включая идеи сверх ТЗ, если они окупаются.</li>
+        <li>Прохожу итерации и ревью с командой и заказчиком.</li>
+        <li>Довожу до передачи в разработку.</li>
+      </ol>
+      <p class="todo" style="margin-top:20px">инструменты (Figma, Photoshop, Illustrator, After Effects?) и английский, если есть.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="chapter" id="contact">
+  <div class="wrap">
+    <div class="chapter-head"><kbd>C</kbd><h2>Давайте поработаем</h2><p>Ищу работу в геймдев-студии или продуктовой команде. Готов к удалёнке.</p></div>
+    <p class="todo" style="max-width:640px;margin-bottom:16px">формат работы и город, если важно.</p>
+    <div class="contact">
+      <div class="row"><span>Telegram / WA</span><code>+373 779 55 986</code><button type="button" data-copy="+37377955986">Копировать</button></div>
+      <div class="row"><span>Почта</span><code>n502591@gmail.com</code><button type="button" data-copy="n502591@gmail.com">Копировать</button></div>
+      <div class="row"><span>Instagram</span><code>obnimay_md</code><button type="button" data-copy="obnimay_md">Копировать</button></div>
+      <div class="row"><span>Dprofile</span><code>dprofile.ru/obnimay_md</code><a class="btn" style="padding:6px 12px;font-size:13px" href="https://dprofile.ru/obnimay_md" target="_blank" rel="noopener">Открыть</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Дмитрий Медушевский · Inkredo · UX/UI дизайнер</div></footer>
+
+<dialog id="lb" aria-label="Увеличенное изображение">
+  <button type="button" id="lbClose">Закрыть <kbd>Esc</kbd></button>
+  <img id="lbImg" alt="">
+</dialog>
+<script src="js/main.js" defer></script>
+</body>
+</html>
