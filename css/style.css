@@ -7,7 +7,6 @@
   --muted:#9d9bb5;
   --violet:#8d7dff;     /* accent, taken from his tuning UI */
   --hud:#3ad6ad;        /* key hints only */
-  --todo:#ffc65c;
   --f-display:"Unbounded","Arial Black",system-ui,sans-serif;
   --f-body:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -34,15 +33,6 @@ p{margin:0}
 .keys a:hover,.keys a:focus-visible{color:var(--text)}
 kbd{font:500 11px var(--f-mono);min-width:24px;height:24px;padding:0 6px;display:inline-grid;place-items:center;border-radius:5px;background:var(--panel);border:1px solid var(--line);border-bottom-width:2px;color:var(--hud)}
 @media (max-width:760px){.brand{display:none}.keys{margin-left:0;justify-content:space-between;width:100%}.keys a span{display:none}.keys a::after{content:attr(data-short);font-size:13px}}
-
-/* draft notice + todo notes */
-.draft{background:color-mix(in srgb,var(--todo) 12%,var(--ink));border-bottom:1px solid color-mix(in srgb,var(--todo) 35%,var(--ink));font-size:14px}
-.draft .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding-block:10px}
-.draft p{flex:1 1 320px;min-width:0}
-.draft button{font:600 13px var(--f-body);color:var(--ink);background:var(--todo);border:0;border-radius:6px;padding:8px 14px;cursor:pointer}
-.todo{border:1px dashed var(--todo);color:var(--todo);border-radius:8px;padding:10px 14px;font-size:14px;line-height:1.5}
-.todo::before{content:"✎ Заполнить: ";font-weight:600}
-body.clean .todo,body.clean .draft{display:none}
 
 /* hero */
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;padding-block:72px 48px}

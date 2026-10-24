@@ -12,6 +12,6 @@ docker run -d -p 8080:80 --name portfolio medushevsky-portfolio
 ```
 Сайт: http://localhost:8080
 
-## Перед публикацией
-Найти в `index.html` все блоки `class="todo"`, вписать факты и удалить пометки,
-а также удалить блок `<div class="draft" ...>` вверху страницы.
+## Публикация
+Сайт публикуется на GitHub Pages автоматически при каждом push в `main`
+(`.github/workflows/pages.yml`).

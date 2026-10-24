@@ -9,8 +9,6 @@
   document.getElementById('lbClose').addEventListener('click',function(){lb.close()});
   lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
 
-  document.getElementById('hideTodo').addEventListener('click',function(){document.body.classList.add('clean')});
-
   var map={'1':'games','2':'product','3':'brand','4':'more','c':'contact','с':'contact'};
   document.addEventListener('keydown',function(e){
     if(e.ctrlKey||e.metaKey||e.altKey||lb.open)return;
