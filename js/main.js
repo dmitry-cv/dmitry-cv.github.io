@@ -32,22 +32,11 @@
       try{navigator.clipboard.writeText(v).then(done,function(){sel(b)})}catch(_){sel(b)}
     });
   });
-  // PDF = the browser's print dialog ("Save as PDF") with the print stylesheet. Lazy images are pulled in once the page has loaded,
-  // otherwise unscrolled screens print blank. print() must run synchronously in the click: after an await Safari drops the user gesture and silently blocks it.
+  // The "Download PDF" link serves a file built in CI (.github/workflows/pages.yml). For a manual Ctrl+P, lazy images are pulled in
+  // once the page has loaded, otherwise unscrolled screens print blank.
   function eager(){document.querySelectorAll('img[loading="lazy"]').forEach(function(i){i.loading='eager'})}
   window.addEventListener('load',function(){setTimeout(eager,1500)});
   window.addEventListener('beforeprint',eager);
-  var printing=false;
-  window.addEventListener('beforeprint',function(){printing=true});
-  document.querySelectorAll('[data-pdf]').forEach(function(b){
-    var label=b.textContent;
-    b.addEventListener('click',function(){
-      eager();printing=false;
-      try{window.print()}catch(_){}
-      // In-app browsers (Telegram, Instagram) make print() a no-op: no beforeprint means no dialog, so say where it will work.
-      setTimeout(function(){if(printing)return;b.textContent=en?'Open in a browser':'Откройте в браузере';setTimeout(function(){b.textContent=label},3000)},1000);
-    });
-  });
 
   function sel(b){var c=b.parentNode.querySelector('code');var r=document.createRange();r.selectNodeContents(c);var s=getSelection();s.removeAllRanges();s.addRange(r);}
 })();

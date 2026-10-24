@@ -29,6 +29,25 @@ jobs:
           cp -r index.html en css js img _site/
           touch _site/.nojekyll
 
+      # Download PDF buttons link to these files: headless Chrome prints each page with the @media print styles,
+      # Ghostscript recompresses the screenshots (Chrome embeds them losslessly, ~25 MB per file).
+      - name: Build PDFs
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ghostscript
+          cp -r _site /tmp/src
+          sed -i '/location.replace/d' /tmp/src/index.html   # the RU page must not redirect the English-locale runner to en/
+          mkdir _site/pdf
+          for l in ru en; do
+            p=/tmp/src/index.html; [ $l = en ] && p=/tmp/src/en/index.html
+            google-chrome --headless --disable-gpu --no-sandbox --no-pdf-header-footer --virtual-time-budget=20000 \
+              --print-to-pdf=/tmp/$l.pdf "file://$p"
+            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.6 -dNOPAUSE -dBATCH -dQUIET \
+              -dDownsampleColorImages=true -dColorImageResolution=200 -dAutoFilterColorImages=false \
+              -dColorImageFilter=/DCTEncode -dJPEGQ=85 \
+              -sOutputFile=_site/pdf/Medushevsky-portfolio-$l.pdf /tmp/$l.pdf
+          done
+          ls -l /tmp/*.pdf _site/pdf
+
       - uses: actions/configure-pages@v5
         with:
           enablement: true

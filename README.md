@@ -7,7 +7,9 @@
 При правке текста обновляйте обе версии.
 
 ## PDF
-Кнопка «Скачать PDF» / «Download PDF» открывает диалог печати браузера («Сохранить как PDF»).
+Кнопка «Скачать PDF» / «Download PDF» скачивает файл `pdf/Medushevsky-portfolio-ru.pdf` / `-en.pdf`.
+Файлы собираются при деплое (`.github/workflows/pages.yml`): headless Chrome печатает страницу, Ghostscript сжимает картинки.
+В репозитории их нет, поэтому при запуске без Docker и в Docker кнопка даёт 404.
 Вид PDF задаётся блоком `@media print` в конце `css/style.css`.
 
 ## Запуск без Docker
